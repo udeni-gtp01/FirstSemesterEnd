@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FirstSemesterEnd</string>
+    <string name="shared_pref_name">SEMESTEREND1</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="valid_username">admin</string>
+</resources>
