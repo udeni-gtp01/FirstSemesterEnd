@@ -1,13 +1,11 @@
 package com.udeni.firstsemesterend
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.activity.viewModels
-import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.udeni.firstsemesterend.databinding.FragmentHomeBinding
@@ -21,12 +19,12 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view= inflater.inflate(R.layout.fragment_home, container, false)
-        val label=view.findViewById<TextView>(R.id.btn_settings)
-        val txtWelcome=view.findViewById<TextView>(R.id.txt_welcome)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
+        val label = view.findViewById<TextView>(R.id.btn_settings)
+        val txtWelcome = view.findViewById<TextView>(R.id.txt_welcome)
 
         val savedUsername = AppSharedPreference(view.context).getUsername()
-        txtWelcome.text="Welcome ${savedUsername}"
+        txtWelcome.text = "Welcome ${savedUsername}"
         label.setOnClickListener {
             navigateToSettings()
         }
@@ -34,7 +32,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun navigateToSettings() {
-        val navController=findNavController()
+        val navController = findNavController()
         navController.navigate(R.id.action_homeFragment_to_settingsFragment)
     }
 }
