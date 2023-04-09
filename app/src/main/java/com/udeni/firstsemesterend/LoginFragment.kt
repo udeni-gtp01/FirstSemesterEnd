@@ -35,12 +35,11 @@ class LoginFragment : Fragment() {
         txtUsername.text=savedUsername
 
         btnLogin.setOnClickListener {
-            navigateToHome()
             Log.d("LNBTI","User is ${txtUsername.text} and ${txtPassword.text}")
-           if(txtUsername.text=="admin" && txtPassword.text=="password")
+           if(txtUsername.text.toString().trim()=="admin" && txtPassword.text.toString().trim()=="password")
                navigateToHome()
            else
-               Toast.makeText(context,"Invalid username or password",Toast.LENGTH_SHORT)
+               Toast.makeText(context,"Invalid username or password",Toast.LENGTH_SHORT).show()
         }
         return view
     }

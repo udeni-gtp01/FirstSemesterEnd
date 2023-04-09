@@ -20,7 +20,7 @@ class SettingsFragment : Fragment() {
         val txtUsername=view.findViewById<TextView>(R.id.edit_username)
         btnUpdate.setOnClickListener {
             AppSharedPreference(view.context).saveUser(txtUsername.text.trim().toString() ?: "")
-            Toast.makeText(view.context,"User updated successfully.",Toast.LENGTH_SHORT)
+            Toast.makeText(view.context,"User updated successfully.",Toast.LENGTH_SHORT).show()
             Log.d("LNBTI","Saved user")
         }
         return view
